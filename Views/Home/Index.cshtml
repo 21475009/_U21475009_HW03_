@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>UpMedia</h1>
+    <h2>Media uploading system</h2>
+
+</div>
+
+<div class="container-fluid2 padding">
+    <h3 class="text-left">Description</h3>
+
+    <div class="col-xs-12 colsm-6 col-md-4">
+        <div class="text-left">
+            <i class="fas fa-bold"></i>
+            <p>
+                This media uploading system is going to be a system that is used to upload different types of media files such as documents, images and videos.
+                The system will be easy to use and it will also be a good place for the user to store their files as they will have easy access to the files whenever
+                they would like to retrieve a file.
+            </p>
+        </div>
+    </div>
+    <div class="col-xs-12 colsm-8 col-md-4">
+        <div class="text-right">
+            <h4> Type of File</h4>
+        </div>
+
+        <div class="text-right">
+            <i class="fab fa-css3"></i>
+            <input type="radio" id="doc" name="FileType" value="Document">
+            <label for="doc">Document</label> <br>
+            <input type="radio" id="img" name="FileType" value="Image">
+            <label for="img">Image</label><br>
+            <input type="radio" id="vid" name="FileType" value="Video">
+            <label for="vid">Video</label>
+        </div>
+
+
+
+        <div class="text-right">
+
+
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {<div class="text-right">
+                    <input type="file" name="files" />
+                </div>
+                <div class=" text-right">
+
+                    <input type="submit" name="okay" />
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+
+</div>
